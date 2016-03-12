@@ -1,0 +1,10 @@
+bin
+obj
+Obj
+*.csproj.user
+*.suo
+*.cache
+*~
+*.swp
+*.userprefs
+*.pidb
