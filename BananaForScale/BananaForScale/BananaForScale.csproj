@@ -31,12 +31,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RobotAI.cs" />
     <Compile Include="AIWorld.cs" />
+    <Compile Include="StateDrawer.cs" />
+    <Compile Include="ZoomedBitmap.cs" />
+    <Compile Include="PredictBot.cs" />
+    <Compile Include="NeighAI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

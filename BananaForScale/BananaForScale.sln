@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaForScale", "BananaForScale\BananaForScale.csproj", "{8AC824EB-4266-460A-A947-5A1CD0C4A373}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTest", "..\..\..\..\..\..\home\hugo\ImageTest\ImageTest\ImageTest.csproj", "{890526A7-9711-459F-92D2-B18FB13B5BB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{890526A7-9711-459F-92D2-B18FB13B5BB3}.Debug|x86.ActiveCfg = Debug|x86
+		{890526A7-9711-459F-92D2-B18FB13B5BB3}.Debug|x86.Build.0 = Debug|x86
+		{890526A7-9711-459F-92D2-B18FB13B5BB3}.Release|x86.ActiveCfg = Release|x86
+		{890526A7-9711-459F-92D2-B18FB13B5BB3}.Release|x86.Build.0 = Release|x86
 		{8AC824EB-4266-460A-A947-5A1CD0C4A373}.Debug|x86.ActiveCfg = Debug|x86
 		{8AC824EB-4266-460A-A947-5A1CD0C4A373}.Debug|x86.Build.0 = Debug|x86
 		{8AC824EB-4266-460A-A947-5A1CD0C4A373}.Release|x86.ActiveCfg = Release|x86
