@@ -37,14 +37,14 @@ namespace BananaForScale
 
 			if (temp <= 15) {
 				double r = temp / 15;
-				a = (int)(r * 255);
-				b = (int)((1 - r) * 255);
+				a = (int)((1-r) * 255);
+				b = (int)(r * 255);
 				c = 0;
 			} else {
 				double r = (temp - 15) / 15;
 				a = 0;
-				b = (int)(r * 255);
-				c = (int)((1 - r) * 255);
+				b = (int)((1-r) * 255);
+				c = (int)(r * 255);
 			}
 			return Color.FromArgb(c,b,a);
 			//return Color.FromArgb ((int)(temp * Math.Pow(2, 19)));

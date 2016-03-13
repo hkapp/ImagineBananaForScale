@@ -29,7 +29,7 @@ namespace BananaForScale
 
 		protected AIWorld.Direction DirectionForMove(int xOld, int yOld, int xNew, int yNew) 
 		{
-			int dx = xOld - xNew;
+			int dx = xNew - xOld;
 			AIWorld.Direction xDir;
 
 			if (dx == 0) {
@@ -40,7 +40,7 @@ namespace BananaForScale
 				xDir = AIWorld.Direction.DOWN;
 			}
 
-			int dy = yOld - yNew;
+			int dy = yNew - yOld;
 			AIWorld.Direction yDir;
 
 			if (dy == 0) {
@@ -52,7 +52,7 @@ namespace BananaForScale
 			}
 
 			if (dx == 0 && dy == 0)
-				return AIWorld.Direction.LEFT;
+				return AIWorld.Direction.NONE;
 			else if (Math.Abs (dx) > Math.Abs (dy))
 				return xDir;
 			else

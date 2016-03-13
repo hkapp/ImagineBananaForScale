@@ -8,19 +8,24 @@ namespace BananaForScale
 		private static readonly Random rand = new Random ();
 
 		private double lastTemp;
+		private bool canRand;
 
 		public NeighAI (int mapWidth, int mapHeight) :base(mapWidth, mapHeight)
 		{
 			lastTemp = 1000;
+			canRand = true;
 		}
 
 		public override AIWorld.Direction GetMove()
 		{
 			double currentTemp = world.GetAt (xPos, yPos);
-			if (currentTemp < lastTemp)
+			if (currentTemp < lastTemp && canRand) {
+				canRand = false;
 				return RandomDirection ();
-			else
+			} else {
+				canRand = true;
 				return ComputeBestDir ();
+			}
 		}
 
 		private AIWorld.Direction ComputeBestDir()

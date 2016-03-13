@@ -8,20 +8,25 @@ namespace BananaForScale
 
 		public static void Main (string[] args)
 		{
-			Random r = new Random();
-			int size = 100;
-			double[,] tempMap = new double[size, size];
+			//Random r = new Random();
+			int size = 50;
+			/*double[,] tempMap = new double[size, size];
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < size; j++) {
 					tempMap [i, j] = r.NextDouble () * 30.0;
 				}
-			}
+			}*/
+			HotSpot spot;
+			spot.x = 5;
+			spot.y = 5;
+			spot.T = 30;
+			double[,] tempMap = MapGenerator.Generate (size, size, spot);
 
 			RobotAI ai = new NeighAI (size, size);
-			RunAndDraw (tempMap, ai, "a");
+			RunAndDraw (tempMap, ai, "/a");
 
 			ai = new PredictBot (size, size);
-			RunAndDraw (tempMap, ai, "b");
+			RunAndDraw (tempMap, ai, "/b");
 		}
 
 		public static void RunAndDraw(double[,] tempMap, RobotAI ai, string filename)
@@ -30,7 +35,7 @@ namespace BananaForScale
 			int x = ai.GetX();
 			int y = ai.GetY();
 			drawer.DrawWithPos (x, y);
-			for (int i = 0; i < 60; i++) {
+			for (int i = 0; i < 3; i++) {
 				int oldX = x;
 				int oldY = y;
 

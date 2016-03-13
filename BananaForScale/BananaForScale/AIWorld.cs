@@ -11,7 +11,7 @@ namespace BananaForScale
 
 		//private const int MAP_SIZE = 100;
 		public const double NO_TEMP = 0.0;
-
+		
 		private double[,] tempMap;
 		private readonly int width;
 		private readonly int height;
@@ -19,6 +19,12 @@ namespace BananaForScale
 		public AIWorld (int width, int height)
 		{
 			tempMap = new double[width,height];
+			for (int i = 0; i < width; i++) {
+				for (int j = 0; j < height; j++) {
+					tempMap [i, j] = 0;
+				}
+			}
+
 			this.width = width;
 			this.height = height;
 		}
@@ -49,7 +55,10 @@ namespace BananaForScale
 		public double GetAt(int x, int y)
 		{
 			if (ContainsPos(x,y)) {
-				return tempMap [x, y];
+				double a = tempMap [x, y];
+				double b = tempMap [x, y];
+				double c = tempMap [x, y];
+				return a;
 			} else {
 				return 0;
 			}

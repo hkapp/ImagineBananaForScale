@@ -42,6 +42,7 @@
     <Compile Include="ZoomedBitmap.cs" />
     <Compile Include="PredictBot.cs" />
     <Compile Include="NeighAI.cs" />
+    <Compile Include="MapGenerator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

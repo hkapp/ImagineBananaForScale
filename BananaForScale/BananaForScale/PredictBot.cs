@@ -26,6 +26,9 @@ namespace BananaForScale
 
 					if (t == AIWorld.NO_TEMP) {
 						t = EstimateAt (x1, y1);
+						Console.WriteLine ("t for i=" + i + ",j=" + j + " knowledge, estimate=" + t);
+					} else {
+						Console.WriteLine("t for i=" + i + ",j=" + j + ", value=" + t);
 					}
 
 					if (t < bestValue) {
@@ -38,6 +41,7 @@ namespace BananaForScale
 
 			if (Math.Abs (iMin) == 1 && Math.Abs (jMin) == 1) {
 				// corner move, can't do that
+				Console.WriteLine ("Evaluating corner case");
 				double ti = world.GetAt (xPos + iMin, yPos);
 				double tj = world.GetAt (xPos, yPos + jMin);
 				if (ti < tj) {
@@ -46,6 +50,8 @@ namespace BananaForScale
 					iMin = 0;
 				}
 			}
+
+			Console.WriteLine ("iMin="+iMin+", jMin="+jMin+"=>"+DirectionForMove (xPos, yPos, xPos + iMin, yPos + jMin));
 
 			return DirectionForMove (xPos, yPos, xPos + iMin, yPos + jMin);
 		}
