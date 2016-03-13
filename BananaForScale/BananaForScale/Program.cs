@@ -5,11 +5,12 @@ namespace BananaForScale
 	class MainClass
 	{
 		private const string PATH = "/home/hugo/ImageTest/maps";
+		private const int N_STEPS = 30;
 
 		public static void Main (string[] args)
 		{
 			//Random r = new Random();
-			int size = 50;
+			int size = 100;
 			/*double[,] tempMap = new double[size, size];
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < size; j++) {
@@ -35,7 +36,7 @@ namespace BananaForScale
 			int x = ai.GetX();
 			int y = ai.GetY();
 			drawer.DrawWithPos (x, y);
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < N_STEPS; i++) {
 				int oldX = x;
 				int oldY = y;
 

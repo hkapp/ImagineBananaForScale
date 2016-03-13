@@ -31,6 +31,7 @@ namespace BananaForScale
 
 		private Color ColorForTemp(double temp)
 		{
+			temp = Math.Min (temp, 30);
 			int a;
 			int b;
 			int c;

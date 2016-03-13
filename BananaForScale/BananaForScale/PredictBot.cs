@@ -63,7 +63,7 @@ namespace BananaForScale
 
 			for (int i = -1; i <= 1; i++) {
 				for (int j = -1; j <= 1; j++) {
-					double t = world.GetAt (xPos + i, yPos + j);
+					double t = world.GetAt (x + i, y + j);
 
 					if (t != AIWorld.NO_TEMP) {
 						neighTot += t;
